@@ -69,6 +69,6 @@ export default function (theme: Theme = {}) {
       color: appStyle.textSectionTitleDisabledColor
     },
     // @ts-expect-error
-    ...(theme['stylesheet']['calendar']['header'] || {})
+    ...((((theme || {}).stylesheet || {}).calendar || {}).header || {})
   });
 }

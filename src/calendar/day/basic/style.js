@@ -67,6 +67,6 @@ export default function styleConstructor(theme = {}) {
       backgroundColor: appStyle.todayDotColor || appStyle.dotColor
     },
     // @ts-expect-error
-    ...(theme['stylesheet']['day']['basic'] || {})
+    ...((((theme || {}).stylesheet || {}).day || {}).basic || {})
   });
 }

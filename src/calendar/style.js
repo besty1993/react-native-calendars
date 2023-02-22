@@ -24,6 +24,6 @@ export default function getStyle(theme = {}) {
       justifyContent: 'space-around'
     },
     // @ts-expect-error
-    ...(theme['stylesheet']['calendar']['main'] || {})
+    ...((((theme || {}).stylesheet || {}).calendar || {}).main || {})
   });
 }

@@ -50,6 +50,6 @@ export default function styleConstructor(theme = {}) {
       alignSelf: 'center'
     },
     // @ts-expect-error
-    ...(theme['stylesheet.agenda.main'] || {})
+    ...(theme['stylesheet']['agenda']['main'] || {})
   });
 }

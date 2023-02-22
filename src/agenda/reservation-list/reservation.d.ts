@@ -27,7 +27,40 @@ declare class Reservation extends Component<ReservationProps> {
         renderItem: PropTypes.Requireable<(...args: any[]) => any>;
         renderEmptyDate: PropTypes.Requireable<(...args: any[]) => any>;
     };
-    style: any;
+    style: {
+        container: {
+            flexDirection: "row";
+        };
+        innerContainer: {
+            flex: number;
+        };
+        dayNum: {
+            fontSize: number;
+            fontWeight: "200";
+            fontFamily: string;
+            color: string;
+        };
+        dayText: {
+            fontSize: number;
+            fontWeight: "300" | "600" | "normal" | "bold" | "100" | "200" | "400" | "500" | "700" | "800" | "900";
+            fontFamily: string;
+            color: string;
+            backgroundColor: string;
+            marginTop: number;
+        };
+        day: {
+            width: number;
+            alignItems: "center";
+            justifyContent: "flex-start";
+            marginTop: number;
+        };
+        today: {
+            color: string;
+        };
+        indicator: {
+            marginTop: number;
+        };
+    };
     constructor(props: ReservationProps);
     shouldComponentUpdate(nextProps: ReservationProps): boolean;
     renderDate(date?: XDate, item?: AgendaEntry): JSX.Element | React.Component<{}, {}, any>;

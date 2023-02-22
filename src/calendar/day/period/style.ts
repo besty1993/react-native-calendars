@@ -65,6 +65,6 @@ export default function styleConstructor(theme: Theme = {}) {
       color: appStyle.textInactiveColor
     },
     // @ts-expect-error
-    ...(theme['stylesheet']['day']['period'] || {})
+    ...(theme['stylesheet.day.period'] || {})
   });
 }

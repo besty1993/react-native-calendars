@@ -25,6 +25,6 @@ export default function styleConstructor(theme = {}) {
       marginRight: 4
     },
     // @ts-expect-error
-    ...(theme['stylesheet.marking'] || {})
+    ...(theme['stylesheet']['marking'] || {})
   });
 }

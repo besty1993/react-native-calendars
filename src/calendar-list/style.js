@@ -32,6 +32,6 @@ export default function getStyle(theme = {}) {
       paddingHorizontal: 15
     },
     // @ts-expect-error
-    ...(theme['stylesheet.calendar-list.main'] || {})
+    ...(theme['stylesheet']['calendar-list']['main'] || {})
   });
 }
